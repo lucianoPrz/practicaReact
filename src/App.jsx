@@ -8,12 +8,28 @@
 import Articulos from "./components/Articulos/Articulos"
 import CustomHooks from "./components/CustomHooks/CustomHooks"
 
+// importamos el componente mensaje y la funcion
+import Mensaje from "./components/Patrones/Mensaje" 
+import { mensajeConTitulo, conAumento } from "./components/Patrones/hoc"
+import Producto from "./components/Patrones/Producto"
+import Login from "./components/Patrones/Login"
 
 
 const App = () => {
+  const NuevoComponente = mensajeConTitulo(Mensaje)
+  const NuevoProducto = conAumento(Producto)
+
   return (
     <>
-      <h1>Blog Gatitos</h1>
+      <NuevoComponente/>
+      <NuevoProducto nombre={"tomate"} precio={100}/>
+      <Login/>
+
+    {
+      /* 
+      
+
+        <h1>Blog Gatitos</h1>
 
       <h2>Noticias</h2>
       <Articulos img={"https://placekitten.com/200/286"} titulo={"Alimentos nuevos"}>
@@ -34,6 +50,10 @@ const App = () => {
       <hr />
 
       <CustomHooks/>
+
+      */
+    }
+      
 
     </>
   )
