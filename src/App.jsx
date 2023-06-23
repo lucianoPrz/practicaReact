@@ -5,28 +5,53 @@
 // import JSONPlace from "./components/JSONPlace/JSONPlace"
 //import Netflix from "./components/Netflix/Netflix"
 //import ContactForm from "./components/ContactForm/ContactForm"
-import Articulos from "./components/Articulos/Articulos"
-import CustomHooks from "./components/CustomHooks/CustomHooks"
+//import Articulos from "./components/Articulos/Articulos"
+//import CustomHooks from "./components/CustomHooks/CustomHooks"
 
 // importamos el componente mensaje y la funcion
-import Mensaje from "./components/Patrones/Mensaje" 
-import { mensajeConTitulo, conAumento } from "./components/Patrones/hoc"
-import Producto from "./components/Patrones/Producto"
-import Login from "./components/Patrones/Login"
+//import Mensaje from "./components/Patrones/Mensaje" 
+//import { mensajeConTitulo, conAumento } from "./components/Patrones/hoc"
+//import Producto from "./components/Patrones/Producto"
+//import Login from "./components/Patrones/Login"
+import Home from "./componentes/Home/Home"
+import Computadoras from "./componentes/Computadoras/Computadoras"
+import Celulares from "./componentes/Celulares/Celulares"
+import Sillas from "./componentes/Sillas/Sillas"
+import Menu from "./componentes/Menu/Menu"
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
 
 
 const App = () => {
-  const NuevoComponente = mensajeConTitulo(Mensaje)
-  const NuevoProducto = conAumento(Producto)
+  //const NuevoComponente = mensajeConTitulo(Mensaje)
+  //const NuevoProducto = conAumento(Producto)
 
   return (
     <>
-      <NuevoComponente/>
+      <BrowserRouter>
+        <Menu/>
+        <Routes>
+          <Route path="/" element = {<Home/>} />
+          <Route path="/computadoras" element = {<Computadoras/>} />
+          <Route path="/celulares" element = {<Celulares/>} />
+          <Route path="/sillas/:id" element = {<Sillas/>} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+
+export default App
+
+/*
+
+ <NuevoComponente/>
       <NuevoProducto nombre={"tomate"} precio={100}/>
       <Login/>
 
     {
-      /* 
+     
       
 
         <h1>Blog Gatitos</h1>
@@ -51,12 +76,7 @@ const App = () => {
 
       <CustomHooks/>
 
-      */
-    }
       
+    }
 
-    </>
-  )
-}
-
-export default App
+*/
