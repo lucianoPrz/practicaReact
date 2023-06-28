@@ -20,6 +20,7 @@ import Sillas from "./componentes/Sillas/Sillas"
 import Menu from "./componentes/Menu/Menu"
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Eventos from "./components/Eventos/Eventos"
 
 
 
@@ -29,15 +30,7 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter>
-        <Menu/>
-        <Routes>
-          <Route path="/" element = {<Home/>} />
-          <Route path="/computadoras" element = {<Computadoras/>} />
-          <Route path="/celulares" element = {<Celulares/>} />
-          <Route path="/sillas/:id" element = {<Sillas/>} />
-        </Routes>
-      </BrowserRouter>
+      <Eventos />
     </>
   )
 }
@@ -75,6 +68,19 @@ export default App
       <hr />
 
       <CustomHooks/>
+
+
+      ===================================================================================
+
+      <BrowserRouter>
+        <Menu/>
+        <Routes>
+          <Route path="/" element = {<Home/>} />
+          <Route path="/computadoras" element = {<Computadoras/>} />
+          <Route path="/celulares" element = {<Celulares/>} />
+          <Route path="/sillas/:id" element = {<Sillas/>} />
+        </Routes>
+      </BrowserRouter>
 
       
     }
