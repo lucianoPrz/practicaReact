@@ -21,6 +21,9 @@ import Menu from "./componentes/Menu/Menu"
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Eventos from "./components/Eventos/Eventos"
+import Formulario from "./components/Formulario/Formulario"
+import Escuchadores from "./components/Escuchadores/Escuchadores"
+import Automatico from "./components/Automatico/Automatico"
 
 
 
@@ -30,7 +33,11 @@ const App = () => {
 
   return (
     <>
-      <Eventos />
+      <Automatico />
+      {/*<Eventos />
+    <Escuchadores />
+
+  <Formulario />*/}
     </>
   )
 }
